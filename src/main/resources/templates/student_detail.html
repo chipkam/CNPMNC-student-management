@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Chi Tiết Sinh Viên</title>
+    <style> body { font-family: sans-serif; padding: 20px; } </style>
+</head>
+<body>
+    <h1>Chi Tiết Sinh Viên</h1>
+    <ul>
+        <li><strong>ID:</strong> <span th:text="${student.id}"></span></li>
+        <li><strong>Họ và Tên:</strong> <span th:text="${student.name}"></span></li>
+        <li><strong>Email:</strong> <span th:text="${student.email}"></span></li>
+        <li><strong>Tuổi:</strong> <span th:text="${student.age}"></span></li>
+    </ul>
+
+    <a th:href="@{/students/edit/{id}(id=${student.id})}"><button>Chỉnh sửa</button></a>
+    
+    <a th:href="@{/students/delete/{id}(id=${student.id})}" 
+       onclick="return confirm('Bạn có chắc muốn xóa sinh viên này không?');">
+       <button style="color: red;">Xóa</button>
+    </a>
+
+    <br><br>
+    <a href="/students">Quay lại danh sách</a>
+</body>
+</html>

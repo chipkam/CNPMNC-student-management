@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Sinh Viên</title>
+    <style> body { font-family: sans-serif; padding: 20px; } div { margin-bottom: 10px; } </style>
+</head>
+<body>
+    <h1 th:text="${student.id == null ? 'Them Moi Sinh Vien' : 'Cap Nhat Sinh Vien'}">Form</h1>
+    
+    <form th:action="@{/students/save}" th:object="${student}" method="POST">
+        
+        <div>
+            <label>ID:</label>
+            <input type="text" th:field="*{id}" th:readonly="${student.id != null}" required />
+        </div>
+        
+        <div>
+            <label>Họ và Tên:</label>
+            <input type="text" th:field="*{name}" required />
+        </div>
+        
+        <div>
+            <label>Email:</label>
+            <input type="email" th:field="*{email}" required />
+        </div>
+        
+        <div>
+            <label>Tuổi:</label>
+            <input type="number" th:field="*{age}" required />
+        </div>
+        
+        <button type="submit">Lưu thông tin</button>
+        <a href="/students"><button type="button">Hủy</button></a>
+    </form>
+</body>
+</html>

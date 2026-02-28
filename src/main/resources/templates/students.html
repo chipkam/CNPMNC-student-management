@@ -9,34 +9,57 @@
         table { width: 100%; border-collapse: collapse; margin-top: 20px; }
         th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
         th { background-color: #f2f2f2; }
+        .toolbar {
+            display: flex;
+            justify-content: space-between; /* Đẩy 2 phần tử ra 2 góc */
+            align-items: center; /* Căn giữa theo chiều dọc */
+            margin-bottom: 20px;
+        }
     </style>
+    
 </head>
 <body>
-    <h1>Danh Sach Sinh Vien (SSR)</h1>
+    <h1>Danh Sách Sinh Viên</h1>
     
+    <div class="toolbar">
+        <div class="search-box">
     <form action="/students" method="GET">
-        <input type="text" name="keyword" placeholder="Nhap ten..." />
-        <button type="submit">Tim</button>
+                <input type="text" name="keyword" th:value="${keyword}" placeholder="Nhap ten sinh vien..." />                    
+                <button type="submit" class="btn-primary">Tìm kiếm</button>
+                <a href="/students"><button type="button">Hủy</button></a>
     </form>
+        </div>    
+        <div class="add-box">
+            <a th:href="@{/students/new}">
+                <button type="button">Thêm mới</button>
+            </a>
+        </div>
+    </div>
 
     <table>
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Ho va Ten</th>
+                <th>Họ và Tên</th>
                 <th>Email</th>
-                <th>Tuoi</th>
+                <th>Tuổi</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
             <!-- Cu phap Thymeleaf: Duyet qua danh sach "dsSinhVien" -->
             <!-- th:each="bien_tam : ${key_trong_model}" -->
-            <tr th:each="student : ${dsSinhVien}" th:class="${student.age < 20} ? 'text-danger' : ''">
+            <a th:href="@{/students/new}"><button type="button">Thêm Mới Sinh Viên</button></a>
+
+            <!-- <tr th:each="student : ${dsSinhVien}" th:class="${student.age < 20} ? 'text-danger' : ''"> -->
             <tr th:each="student : ${dsSinhVien}">
-                <td th:text="${student.id}">ID Mau</td>
-                <td th:text="${student.name}">Ten Mau</td>
-                <td th:text="${student.email}">Email Mau</td>
+                <td th:text="${student.id}">ID</td>
+                <td th:text="${student.name}">Tên</td>
+                <td th:text="${student.email}">Email</td>
                 <td th:text="${student.age}">0</td>
+                <td>
+                    <a th:href="@{/students/{id}(id=${student.id})}">Xem Chi Tiết</a>
+                </td>
             </tr>
         </tbody>
     </table>
