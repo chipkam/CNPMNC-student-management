@@ -21,7 +21,7 @@
 
 ### Chạy ứng dụng
 # 1. Clone dự án
-git clone [url-cua-ban]
+git clone [https://github.com/chipkam/CNPMNC-student-management.git]
 # 2. Chạy ứng dụng
 mvn spring-boot:run
 
