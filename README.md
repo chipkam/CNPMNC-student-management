@@ -1,13 +1,13 @@
 # Dự án Quản lý sinh viên (Student Management)
 
 ## Mục lục
-1. [Thành viên](#members)
-2. [Tech stack](#tech-stacks)
-3. [Hướng dẫn chạy dự án](#project-manual)
-> 3.1. [Chạy dự án local](#local-run)
-> 3.2. [Deploy với Render và Neon](#deployment)
-4. [Trả lời câu hỏi](#questions-answering)
-5. [Screenshot cho các module trong Lab 4](#screenshots)
+1. [Thành viên](#1-thành-viên)
+2. [Tech stack](#2-tech-stack)
+3. [Hướng dẫn cách chạy dự án](#3-hướng-dẫn-cách-chạy-dự-án)
+   - 3.1. [Chạy dự án local](#31-chạy-dự-án-local)
+   - 3.2. [Deploy với Neon và Render](#32-deploy-với-neon-và-render)
+4. [Câu hỏi & Bài tập](#4-câu-hỏi-&-bài-tập)
+5. [Screenshot cho các module trong Lab 4 + 5](#5-screenshot-cho-các-module-trong-lab-4-+-5)
 
 ----------------------
 
@@ -57,9 +57,9 @@ POSTGRES_PASSWORD=mat_khau_cua_ban
 - Web Service: Đóng gói bằng Docker và triển khai trên Render.com.
 
 ## 4. Câu hỏi & Bài tập {#questions-answering}
-[Lab_1](docs/exercises/lab_01_exercises.pdf)
-[Lab_3](docs/lab-03)
+- [Lab_1](docs/exercises/lab-01_exercises.pdf)
+- [Lab_3](docs/lab-03)
 
 ## 5. Screenshot cho các module trong Lab 4 + 5 {#screenshots}
-[Lab_4](docs/lab-04/lab_04_screenshots.pdf)
-[Lab_5](docs/lab-05)
+- [Lab_4](docs/lab-04/lab_04_screenshots.pdf)
+- [Lab_5](docs/lab-05)
