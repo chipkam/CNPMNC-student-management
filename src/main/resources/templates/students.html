@@ -48,8 +48,6 @@
         </thead>
         <tbody>
             <!-- Cu phap Thymeleaf: Duyet qua danh sach "dsSinhVien" -->
-            <!-- th:each="bien_tam : ${key_trong_model}" -->
-            <a th:href="@{/students/new}"><button type="button">Thêm Mới Sinh Viên</button></a>
 
             <!-- <tr th:each="student : ${dsSinhVien}" th:class="${student.age < 20} ? 'text-danger' : ''"> -->
             <tr th:each="student : ${dsSinhVien}">
