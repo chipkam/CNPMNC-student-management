@@ -4,8 +4,8 @@
 1. [Thành viên](#members)
 2. [Tech stack](#tech-stacks)
 3. [Hướng dẫn chạy dự án](#project-manual)
-    3.1. [Chạy dự án local](#local-run)
-    3.2. [Deploy với Render và Neon](#deployment)
+> 3.1. [Chạy dự án local](#local-run)
+> 3.2. [Deploy với Render và Neon](#deployment)
 4. [Trả lời câu hỏi](#questions-answering)
 5. [Screenshot cho các module trong Lab 4](#screenshots)
 
